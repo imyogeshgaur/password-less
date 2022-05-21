@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2022 at 12:54 PM
+-- Generation Time: May 21, 2022 at 01:37 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -40,12 +40,12 @@ CREATE TABLE `items` (
 --
 
 INSERT INTO `items` (`id`, `name`, `price`, `deleted`, `picture`) VALUES
-(1, 'Chole Bhature', 25, 0, 'https://shorturl.at/eksLM'),
-(2, 'Pizza', 45, 0, 'https://rb.gy/e7ktot'),
-(3, 'Veg Burger', 20, 0, 'https://rb.gy/ukdeqr'),
-(4, 'Veg Momos', 15, 0, 'https://rb.gy/ssfkh6'),
-(5, 'Veg Biryani', 20, 0, 'https://rb.gy/1rhvba'),
-(6, 'Cold Cofee', 23, 0, 'https://tinyurl.com/2aannbf7');
+(1, 'Chole Bhature', 160, 0, 'https://shorturl.at/eksLM'),
+(2, 'Pizza', 250, 0, 'https://rb.gy/e7ktot'),
+(3, 'Veg Burger', 50, 0, 'https://rb.gy/ukdeqr'),
+(4, 'Veg Momos', 65, 0, 'https://rb.gy/ssfkh6'),
+(5, 'Veg Biryani', 140, 0, 'https://rb.gy/1rhvba'),
+(6, 'Cold Cofee', 60, 0, 'https://tinyurl.com/2aannbf7');
 
 -- --------------------------------------------------------
 
@@ -169,10 +169,10 @@ CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `role` varchar(15) NOT NULL DEFAULT 'Customer',
   `name` varchar(15) NOT NULL,
-  `username` varchar(10) NOT NULL,
-  `password` varchar(16) NOT NULL,
-  `email` varchar(35) DEFAULT NULL,
-  `address` varchar(300) DEFAULT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(160) NOT NULL,
+  `email` varchar(350) DEFAULT NULL,
+  `address` varchar(3000) DEFAULT NULL,
   `contact` bigint(11) NOT NULL,
   `verified` tinyint(1) NOT NULL DEFAULT 0,
   `deleted` tinyint(4) NOT NULL DEFAULT 0

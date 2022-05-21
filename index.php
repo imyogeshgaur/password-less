@@ -45,7 +45,7 @@
   <img src="https://shorturl.at/eksLM" class="card-img-top" alt="Chole Bhature" width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Chole Bhature</h5>
-    <p class="card-text">Price: ₹160</p>
+    <p class="card-text">Price: $160</p>
     <a href="login.php" class="btn btn-danger">Buy</a>
   </div>
 </div>
@@ -53,7 +53,7 @@
   <img src="https://rb.gy/e7ktot" class="card-img-top" alt="..." width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Pizza</h5>
-    <p class="card-text">Price: ₹250</p>
+    <p class="card-text">Price: $250</p>
     <a href="login.php" class="btn btn-danger">Buy</a>
   </div>
 </div>
@@ -61,7 +61,7 @@
   <img src="https://rb.gy/ukdeqr" class="card-img-top" alt="..." width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Veg Burger</h5>
-    <p class="card-text">Price: ₹50</p>
+    <p class="card-text">Price: $50</p>
     <a href="login.php" class="btn btn-danger" width="100px" height="100px">Buy</a>
   </div>
 </div>
@@ -71,7 +71,7 @@
   <img src="https://rb.gy/ssfkh6" class="card-img-top" alt="..." width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Veg Momos</h5>
-    <p class="card-text">Price : ₹65</p>
+    <p class="card-text">Price : $65</p>
     <a href="login.php" class="btn btn-danger">Buy</a>
   </div>
 </div>
@@ -79,7 +79,7 @@
   <img src="https://rb.gy/1rhvba" class="card-img-top" alt="Veg Biryani" width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Veg Biryani</h5>
-    <p class="card-text">Price : ₹140</p>
+    <p class="card-text">Price : $140</p>
     <a href="login.php" class="btn btn-danger">Buy</a>
   </div>
 </div>
@@ -87,7 +87,7 @@
   <img src="https://tinyurl.com/2aannbf7" class="card-img-top" alt="Cold Coffee" width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Cold Coffee</h5>
-    <p class="card-text">Price : ₹60</p>
+    <p class="card-text">Price : $60</p>
     <a href="login.php" class="btn btn-danger">Buy</a>
   </div>
 </div>
