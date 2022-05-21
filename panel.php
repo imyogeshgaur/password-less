@@ -75,6 +75,9 @@ include 'includes/wallet.php';
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
+  .hidden{
+    display:none;
+  }
   </style> 
 </head>
 
@@ -98,7 +101,7 @@ include 'includes/wallet.php';
                     <ul class="left">                      
                       <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
                     </ul>
-                    <ul class="right hide-on-med-and-down">                        
+                    <ul class="right hide-on-med-and-down hidden">                        
                         <li><a href="#" class="waves-effect waves-block waves-light"><i class="mdi-editor-attach-money"><?php echo $balance;?></i></a>
                         </li>
                     </ul>					
@@ -216,18 +219,18 @@ include 'includes/wallet.php';
                   <table id="data-table-customer" class="responsive-table display" cellspacing="0">
                     <thead>
                       <tr>
+                        <th>Picture</th>
                         <th>Name</th>
                         <th>Item Price/Piece</th>
                         <th>Quantity</th>
                       </tr>
                     </thead>
-
                     <tbody>
 				<?php
 				$result = mysqli_query($con, "SELECT * FROM items where not deleted;");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo '<tr><td>'.$row["name"].'</td><td>'.$row["price"].'</td>';                      
+					echo '<tr><td><img src="'.$row["picture"].'" alt="wow" width="300px" height="100px"></td><td>'.$row["name"].'</td><td>'.$row["price"].'</td>';                      
 					echo '<td><div class="input-field col s12"><label for='.$row["id"].' class="">Quantity</label>';
 					echo '<input id="'.$row["id"].'" name="'.$row['id'].'" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td></tr>';
 				}

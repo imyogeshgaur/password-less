@@ -212,21 +212,20 @@ include 'includes/connect.php';
 				<table id="data-table-admin" class="responsive-table display" cellspacing="0">
                     <thead>
                       <tr>
+                        <th>Picture</th>
                         <th>Name</th>
                         <th>Item Price/Piece</th>
                         <th>Available</th>
                       </tr>
                     </thead>
-
                     <tbody>
 				<?php
 				$result = mysqli_query($con, "SELECT * FROM items");
 				while($row = mysqli_fetch_array($result))
 				{
-					echo '<tr><td><div class="input-field col s12"><label for="'.$row["id"].'_name">Name</label>';
-					echo '<input value="'.$row["name"].'" id="'.$row["id"].'_name" name="'.$row['id'].'_name" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';					
-					echo '<td><div class="input-field col s12 "><label for="'.$row["id"].'_price">Price</label>';
-					echo '<input value="'.$row["price"].'" id="'.$row["id"].'_price" name="'.$row['id'].'_price" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';                   
+          echo '<tr><td><img src="'.$row["picture"].'" alt="wow" width="300px" height="100px"></td>'; 
+					echo '<td><input value="'.$row["name"].'" id="'.$row["id"].'_name" name="'.$row['id'].'_name" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';					
+					echo '<td><input value="'.$row["price"].'" id="'.$row["id"].'_price" name="'.$row['id'].'_price" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td>';                                         
 					echo '<td>';
 					if($row['deleted'] == 0){
 						$text1 = 'selected';
@@ -259,15 +258,13 @@ include 'includes/connect.php';
               </div>
               <div>
 <table>
-                    <thead>
-                      <tr>
-                        <th data-field="id">Name</th>
-                        <th data-field="name">Item Price/Piece</th>
-                      </tr>
-                    </thead>
+                   
 
                     <tbody>
 				<?php
+          echo '<td><div class="input-field col s12 "><label for="picture" class="">Picture</label>';
+					echo '<input id="picture" name="picture" type="text" data-error=".errorTxt02"><div class="errorTxt02"></div></td>';                   
+					echo '<td></tr>';
 					echo '<tr><td><div class="input-field col s12"><label for="name">Name</label>';
 					echo '<input id="name" name="name" type="text" data-error=".errorTxt01"><div class="errorTxt01"></div></td>';					
 					echo '<td><div class="input-field col s12 "><label for="price" class="">Price</label>';
@@ -345,6 +342,10 @@ include 'includes/connect.php';
 			$result = mysqli_query($con, "SELECT * FROM items");
 			while($row = mysqli_fetch_array($result))
 			{
+        echo $row["id"].'_picture:{
+        required: true,	
+        min: 0
+        },';
 				echo $row["id"].'_name:{
 				required: true,
 				minlength: 5,
@@ -361,14 +362,17 @@ include 'includes/connect.php';
 			<?php
 			$result = mysqli_query($con, "SELECT * FROM items");
 			while($row = mysqli_fetch_array($result))
-			{  
+			{ 
+        echo $row["id"].'_picture:{
+        required: "Enter picture of item"
+        },';
 				echo $row["id"].'_name:{
-				required: "Ener item name",
+				required: "Enter item name",
 				minlength: "Minimum length is 5 characters",
 				maxlength: "Maximum length is 20 characters"
 				},';
 				echo $row["id"].'_price:{
-				required: "Ener price of item",
+				required: "Enter price of item",
 				min: "Minimum item price is Rs. 0"
 				},';				
 			}
@@ -388,6 +392,10 @@ include 'includes/connect.php';
     <script type="text/javascript">
     $("#formValidate1").validate({
         rules: {
+    picture:{
+      require:true,
+      min:0,
+    }
 		name: {
 				required: true,
 				minlength: 5
@@ -398,6 +406,9 @@ include 'includes/connect.php';
 			},
 	},
         messages: {
+    message:{
+      require:"Enter Item Picture",
+    }
 		name: {
 				required: "Enter item name",
 				minlength: "Minimum length is 5 characters"

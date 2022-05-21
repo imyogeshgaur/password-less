@@ -438,7 +438,7 @@ include 'includes/connect.php';
 	{
 		if($_SESSION['customer_sid']==session_id())
 		{
-			header("location:index.php");		
+			header("location:panel.php");		
 		}
 		else{
 			header("location:login.php");

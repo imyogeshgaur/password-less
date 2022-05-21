@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.5.2
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 30, 2017 at 05:22 PM
--- Server version: 10.1.21-MariaDB
--- PHP Version: 5.6.30
+-- Generation Time: May 21, 2022 at 05:42 AM
+-- Server version: 10.4.24-MariaDB
+-- PHP Version: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -30,19 +31,20 @@ CREATE TABLE `items` (
   `id` int(11) NOT NULL,
   `name` varchar(20) NOT NULL,
   `price` int(11) NOT NULL,
-  `deleted` tinyint(4) NOT NULL DEFAULT '0'
+  `deleted` tinyint(4) NOT NULL DEFAULT 0,
+  `picture` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `items`
 --
 
-INSERT INTO `items` (`id`, `name`, `price`, `deleted`) VALUES
-(1, 'Item 1', 25, 1),
-(2, 'Item 2', 45, 0),
-(3, 'Item 3', 20, 0),
-(4, 'Item 4', 15, 1),
-(5, 'Item 5', 20, 0);
+INSERT INTO `items` (`id`, `name`, `price`, `deleted`, `picture`) VALUES
+(1, 'Chole Bhature', 25, 0, 'https://shorturl.at/eksLM'),
+(2, 'Pizza', 45, 0, 'https://rb.gy/e7ktot'),
+(3, 'Veg Burger', 20, 0, 'https://rb.gy/ukdeqr'),
+(4, 'Veg Momos', 15, 0, 'https://rb.gy/ssfkh6'),
+(5, 'Veg Biryani', 20, 0, 'https://rb.gy/1rhvba');
 
 -- --------------------------------------------------------
 
@@ -55,11 +57,11 @@ CREATE TABLE `orders` (
   `customer_id` int(11) NOT NULL,
   `address` varchar(300) NOT NULL,
   `description` varchar(300) NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `date` datetime NOT NULL DEFAULT current_timestamp(),
   `payment_type` varchar(16) NOT NULL DEFAULT 'Wallet',
   `total` int(11) NOT NULL,
   `status` varchar(25) NOT NULL DEFAULT 'Yet to be delivered',
-  `deleted` tinyint(4) NOT NULL DEFAULT '0'
+  `deleted` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -121,8 +123,8 @@ CREATE TABLE `tickets` (
   `description` varchar(3000) NOT NULL,
   `status` varchar(8) NOT NULL DEFAULT 'Open',
   `type` varchar(30) NOT NULL DEFAULT 'Others',
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `deleted` tinyint(4) NOT NULL DEFAULT '0'
+  `date` datetime NOT NULL DEFAULT current_timestamp(),
+  `deleted` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -143,7 +145,7 @@ CREATE TABLE `ticket_details` (
   `ticket_id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
   `description` varchar(1000) NOT NULL,
-  `date` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP
+  `date` datetime NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -168,11 +170,11 @@ CREATE TABLE `users` (
   `name` varchar(15) NOT NULL,
   `username` varchar(10) NOT NULL,
   `password` varchar(16) NOT NULL,
-  `email` varchar(35) NULL,
-  `address` varchar(300) NULL,
+  `email` varchar(35) DEFAULT NULL,
+  `address` varchar(300) DEFAULT NULL,
   `contact` bigint(11) NOT NULL,
-  `verified` tinyint(1) NOT NULL DEFAULT '0',
-  `deleted` tinyint(4) NOT NULL DEFAULT '0'
+  `verified` tinyint(1) NOT NULL DEFAULT 0,
+  `deleted` tinyint(4) NOT NULL DEFAULT 0
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -219,7 +221,7 @@ CREATE TABLE `wallet_details` (
   `wallet_id` int(11) NOT NULL,
   `number` varchar(16) NOT NULL,
   `cvv` int(3) NOT NULL,
-  `balance` int(11) NOT NULL DEFAULT '2000'
+  `balance` int(11) NOT NULL DEFAULT 2000
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -310,41 +312,49 @@ ALTER TABLE `wallet_details`
 --
 ALTER TABLE `items`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
 --
 -- AUTO_INCREMENT for table `order_details`
 --
 ALTER TABLE `order_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
 --
 -- AUTO_INCREMENT for table `tickets`
 --
 ALTER TABLE `tickets`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT for table `ticket_details`
 --
 ALTER TABLE `ticket_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `wallet`
 --
 ALTER TABLE `wallet`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- AUTO_INCREMENT for table `wallet_details`
 --
 ALTER TABLE `wallet_details`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
 --
 -- Constraints for dumped tables
 --
@@ -386,6 +396,7 @@ ALTER TABLE `wallet`
 --
 ALTER TABLE `wallet_details`
   ADD CONSTRAINT `wallet_details_ibfk_1` FOREIGN KEY (`wallet_id`) REFERENCES `wallet` (`id`);
+COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
