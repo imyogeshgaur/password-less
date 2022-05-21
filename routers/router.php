@@ -40,7 +40,7 @@ else
 		$_SESSION['user_id'] = $user_id;
 		$_SESSION['role'] = $role;
 		$_SESSION['name'] = $name;			
-		header("location: ../index.php");
+		header("location: ../panel.php");
 	}
 	else
 	{

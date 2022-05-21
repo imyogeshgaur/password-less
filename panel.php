@@ -75,9 +75,6 @@ include 'includes/wallet.php';
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
-  .hidden{
-    display:none;
-  }
   </style> 
 </head>
 
@@ -100,11 +97,7 @@ include 'includes/wallet.php';
                 <div class="nav-wrapper">
                     <ul class="left">                      
                       <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
-                    </ul>
-                    <ul class="right hide-on-med-and-down hidden">                        
-                        <li><a href="#" class="waves-effect waves-block waves-light"><i class="mdi-editor-attach-money"><?php echo $balance;?></i></a>
-                        </li>
-                    </ul>					
+                    </ul>				
                 </div>
             </nav>
         </div>
@@ -139,7 +132,7 @@ include 'includes/wallet.php';
                 </div>
             </div>
             </li>
-            <li class="bold active"><a href="index.php" class="waves-effect waves-cyan"><i class="mdi-editor-border-color"></i> Order Food</a>
+            <li class="bold active"><a href="panel.php" class="waves-effect waves-cyan"><i class="mdi-editor-border-color"></i> Order Food</a>
             </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">

@@ -142,7 +142,7 @@ $verified = $row['verified'];
                 </div>
             </div>
             </li>
-            <li class="bold"><a href="index.php" class="waves-effect waves-cyan"><i class="mdi-editor-border-color"></i> Order Food</a>
+            <li class="bold"><a href="panel.php" class="waves-effect waves-cyan"><i class="mdi-editor-border-color"></i> Order Food</a>
             </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
@@ -224,7 +224,7 @@ $verified = $row['verified'];
 							<label for="payment_type">Payment Type</label><br><br>
 							<select id="payment_type" name="payment_type">
 									<option value="Wallet" selected>Wallet</option>
-									<option value="Cash On Delivery" <?php if(!$verified) echo 'disabled';?>>Cash on Delivery</option>							
+									<option value="Cash On Delivery">Cash on Delivery</option>							
 							</select>
                         </div>
                       </div>					

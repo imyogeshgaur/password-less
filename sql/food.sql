@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 21, 2022 at 05:42 AM
+-- Generation Time: May 21, 2022 at 12:54 PM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.1.6
 
@@ -44,7 +44,8 @@ INSERT INTO `items` (`id`, `name`, `price`, `deleted`, `picture`) VALUES
 (2, 'Pizza', 45, 0, 'https://rb.gy/e7ktot'),
 (3, 'Veg Burger', 20, 0, 'https://rb.gy/ukdeqr'),
 (4, 'Veg Momos', 15, 0, 'https://rb.gy/ssfkh6'),
-(5, 'Veg Biryani', 20, 0, 'https://rb.gy/1rhvba');
+(5, 'Veg Biryani', 20, 0, 'https://rb.gy/1rhvba'),
+(6, 'Cold Cofee', 23, 0, 'https://tinyurl.com/2aannbf7');
 
 -- --------------------------------------------------------
 
@@ -186,7 +187,8 @@ INSERT INTO `users` (`id`, `role`, `name`, `username`, `password`, `email`, `add
 (2, 'Customer', 'Customer 1', 'user1', 'pass1', 'mail2@example.com', 'Address 2', 9898000001, 1, 0),
 (3, 'Customer', 'Customer 2', 'user2', 'pass2', 'mail3@example.com', 'Address 3', 9898000002, 1, 0),
 (4, 'Customer', 'Customer 3', 'user3', 'pass3', '', '', 9898000003, 0, 0),
-(5, 'Customer', 'Customer 4', 'user4', 'pass4', '', '', 9898000004, 0, 1);
+(5, 'Customer', 'Customer 4', 'user4', 'pass4', '', '', 9898000004, 0, 1),
+(6, 'Customer', 'Yogesh Gaur', 'imyogesh', 'abc@123', NULL, NULL, 9868747636, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -208,7 +210,8 @@ INSERT INTO `wallet` (`id`, `customer_id`) VALUES
 (2, 2),
 (3, 3),
 (4, 4),
-(5, 5);
+(5, 5),
+(6, 6);
 
 -- --------------------------------------------------------
 
@@ -233,7 +236,8 @@ INSERT INTO `wallet_details` (`id`, `wallet_id`, `number`, `cvv`, `balance`) VAL
 (2, 2, '1887587142382050', 772, 1850),
 (3, 3, '4595809639046830', 532, 1585),
 (4, 4, '5475856443351234', 521, 2000),
-(5, 5, '9076633115663264', 229, 2000);
+(5, 5, '9076633115663264', 229, 2000),
+(6, 6, '86844022501543', 531, 2000);
 
 --
 -- Indexes for dumped tables
@@ -311,7 +315,7 @@ ALTER TABLE `wallet_details`
 -- AUTO_INCREMENT for table `items`
 --
 ALTER TABLE `items`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -341,19 +345,19 @@ ALTER TABLE `ticket_details`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `wallet`
 --
 ALTER TABLE `wallet`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `wallet_details`
 --
 ALTER TABLE `wallet_details`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- Constraints for dumped tables
