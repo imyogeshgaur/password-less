@@ -73,6 +73,35 @@ include 'includes/connect.php';
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
+  .navbar-color{
+    background-color:rgb(90, 90, 253);
+  }
+  .user-details{
+    background: url("./images/user-profile-bg.jpg") no-repeat center center !important;
+  }
+    input[type="text"]:focus:not([readonly]),
+  input[type="email"]:focus:not([readonly]),
+  input[type="tel"]:focus:not([readonly])
+  {
+  border-bottom: 1px solid rgb(116, 116, 224);
+  box-shadow: 0 1px 0 0 rgb(116, 116, 224);
+  }
+  .prefix{
+    color:rgb(90, 90, 253) !important;
+  }
+  a{
+    color:rgb(90, 90, 253) !important;
+  }
+  a:hover{
+    color:green !important;
+  }
+  .btn{
+    background:rgb(90, 90, 253) !important;
+  }
+  .page-footer{
+    background:rgb(90, 90, 253) !important;
+    margin-top:100vh !important;
+  }
   </style> 
 </head>
 
@@ -93,9 +122,7 @@ include 'includes/connect.php';
         <div class="navbar-fixed">
             <nav class="navbar-color">
                 <div class="nav-wrapper">
-                    <ul class="left">                      
-                      <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
-                    </ul>
+                    <h1 style="text-align:center">Canteen Management System</h1>
                 </div>
             </nav>
         </div>
@@ -116,7 +143,6 @@ include 'includes/connect.php';
             <li class="user-details cyan darken-2">
             <div class="row">
                 <div class="col col s4 m4 l4">
-                    <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
                 </div>
 				 <div class="col col s8 m8 l8">
                     <ul id="profile-dropdown" class="dropdown-content">
@@ -251,7 +277,7 @@ include 'includes/connect.php';
 							$balance = $row2['balance'];
 						}
 					}
-					echo '<td><label for="balance">Balance</label><input id="balance" name="'.$row['id'].'_balance" value="'.$balance.'" type="number" data-error=".errorTxt01"><div class="errorTxt01"></div></td></tr>'; 					
+					echo '<td><label for="balance">Balance</label><input type="text" id="balance" name="'.$row['id'].'_balance" value="'.$balance.'" type="number" data-error=".errorTxt01"><div class="errorTxt01"></div></td></tr>'; 					
 				}
 				?>
                     </tbody>
@@ -291,7 +317,7 @@ include 'includes/connect.php';
 					echo '<td><label for="password">Password</label><input id="password" name="password" type="password" data-error=".errorTxt03"><div class="errorTxt03"></div></td>';   									
 					echo '<td><label for="name">Name</label><input id="name" name="name" type="text" data-error=".errorTxt04"><div class="errorTxt04"></div></td>';
 					echo '<td><label for="email">Email</label><input id="email" name="email" type="email"></td>';
-					echo '<td><label for="contact">Phone number</label><input id="contact" name="contact" type="number" data-error=".errorTxt05"><div class="errorTxt05"></div></td>';   
+					echo '<td><label for="contact">Phone number</label><input id="contact" name="contact" type="tel" data-error=".errorTxt05"><div class="errorTxt05"></div></td>';   
 					echo '<td><label for="address">Address</label><input id="address" name="address" type="text" data-error=".errorTxt06"><div class="errorTxt06"></div></td>';   
 					echo '<td><select name="role">
                       <option value="Administrator">Administrator</option>
