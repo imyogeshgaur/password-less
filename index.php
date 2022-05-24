@@ -9,14 +9,14 @@
 </head>
 <style>
   .carousel-control-prev-icon{
-    background-color:red;
+    background-color:rgb(65, 65, 243);;
   }
   .carousel-control-next-icon{
-    background-color:red;
+    background-color:rgb(65, 65, 243);;
   }
   </style>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Canteen Management System</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -39,14 +39,14 @@
       </nav>
       <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
         <div class="carousel-inner">
-    <h1 class="text-center" style="color:red">Items Avaliable</h1>
+    <h1 class="text-center" style="color:rgb(65, 65, 243);">Items Avaliable</h1>
     <div class="carousel-item d-flex active mt-5">
     <div class="card" style="width:30%;margin-left:15%">
   <img src="https://shorturl.at/eksLM" class="card-img-top" alt="Chole Bhature" width="100px" height="100px">
   <div class="card-body">
     <h5 class="card-title">Chole Bhature</h5>
     <p class="card-text">Price: $160</p>
-    <a href="login.php" class="btn btn-danger">Buy</a>
+    <a href="login.php" class="btn btn-primary">Buy</a>
   </div>
 </div>
 <div class="card" style="width: 30%;margin-left:5%">
@@ -54,7 +54,7 @@
   <div class="card-body">
     <h5 class="card-title">Pizza</h5>
     <p class="card-text">Price: $250</p>
-    <a href="login.php" class="btn btn-danger">Buy</a>
+    <a href="login.php" class="btn btn-primary">Buy</a>
   </div>
 </div>
 <div class="card" style="width: 30%;margin-left:5%;margin-right:15%">
@@ -62,7 +62,7 @@
   <div class="card-body">
     <h5 class="card-title">Veg Burger</h5>
     <p class="card-text">Price: $50</p>
-    <a href="login.php" class="btn btn-danger" width="100px" height="100px">Buy</a>
+    <a href="login.php" class="btn btn-primary" width="100px" height="100px">Buy</a>
   </div>
 </div>
     </div>
@@ -72,7 +72,7 @@
   <div class="card-body">
     <h5 class="card-title">Veg Momos</h5>
     <p class="card-text">Price : $65</p>
-    <a href="login.php" class="btn btn-danger">Buy</a>
+    <a href="login.php" class="btn btn-primary">Buy</a>
   </div>
 </div>
 <div class="card" style="width: 30%;margin-left:5%">
@@ -80,7 +80,7 @@
   <div class="card-body">
     <h5 class="card-title">Veg Biryani</h5>
     <p class="card-text">Price : $140</p>
-    <a href="login.php" class="btn btn-danger">Buy</a>
+    <a href="login.php" class="btn btn-primary">Buy</a>
   </div>
 </div>
 <div class="card" style="width: 30%;margin-left:5%;margin-right:15%">
@@ -88,7 +88,7 @@
   <div class="card-body">
     <h5 class="card-title">Cold Coffee</h5>
     <p class="card-text">Price : $60</p>
-    <a href="login.php" class="btn btn-danger">Buy</a>
+    <a href="login.php" class="btn btn-primary">Buy</a>
   </div>
 </div>
     </div>

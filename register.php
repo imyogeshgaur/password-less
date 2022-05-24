@@ -77,6 +77,18 @@ else{
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
+  .waves-light{
+    background:rgb(110, 110, 184);;
+  }
+  a{
+    color:blue;
+  }
+  a:hover{
+    color:green;
+  }
+  .prefix{
+    color:rgb(116, 116, 224)
+  }
   </style> 
 </head>
 
@@ -89,7 +101,7 @@ else{
   </div>
   <!-- End Page Loading -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -153,7 +165,7 @@ else{
         </div>		
         <div class="row">
           <div class="input-field col s12">
-			<a href="javascript:void(0);" onclick="document.getElementById('formValidate').submit();" class="btn waves-effect waves-light col s12">Login</a>
+			<a href="javascript:void(0);" onclick="document.getElementById('formValidate').submit();" class="btn waves-effect waves-light col s12">Register</a>
           </div>
           <div class="input-field col s12">
             <p class="margin center medium-small sign-up">Already have an account? <a href="login.php">Login</a></p>

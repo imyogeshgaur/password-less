@@ -37,7 +37,26 @@ else{
 
   <!-- INCLUDED PLUGIN CSS ON THIS PAGE -->
   <link href="js/plugins/perfect-scrollbar/perfect-scrollbar.css" type="text/css" rel="stylesheet" media="screen,projection">
-  
+  <style>
+     .waves-light{
+    background:rgb(110, 110, 184);;
+  }
+  a{
+    color:blue;
+  }
+  a:hover{
+    color:green;
+  }
+  input[type="text"]:focus:not([readonly]),
+  input[type="password"]:focus:not([readonly])
+  {
+  border-bottom: 1px solid rgb(116, 116, 224);
+  box-shadow: 0 1px 0 0 rgb(116, 116, 224);
+  }
+  .prefix{
+    color:rgb(116, 116, 224)
+  }
+  </style>
 </head>
 
 <body class="cyan">
@@ -49,7 +68,7 @@ else{
   </div>
   <!-- End Page Loading -->
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>

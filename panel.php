@@ -224,8 +224,7 @@ include 'includes/wallet.php';
 				while($row = mysqli_fetch_array($result))
 				{
 					echo '<tr><td><img src="'.$row["picture"].'" alt="wow" width="300px" height="100px"></td><td>'.$row["name"].'</td><td>'.$row["price"].'</td>';                      
-					echo '<td><div class="input-field col s12"><label for='.$row["id"].' class="">Quantity</label>';
-					echo '<input id="'.$row["id"].'" name="'.$row['id'].'" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td></tr>';
+					echo '<td><button id="increase">+</button><input id="'.$row["id"].'" name="'.$row['id'].'" type="text" data-error=".errorTxt'.$row["id"].'"><div class="errorTxt'.$row["id"].'"></div></td></tr>';
 				}
 				?>
                     </tbody>
@@ -335,6 +334,11 @@ include 'includes/wallet.php';
           }
         }
      });
+    const inc = document.getElementById("increase"); 
+    inc.addEventListener("click",()=>{
+      console.log("Hi");
+    })
+    
     </script>
 </body>
 
