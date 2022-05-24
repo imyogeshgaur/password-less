@@ -20,7 +20,7 @@
 </head>
 
 <body>
-<nav class="navbar navbar-expand-lg navbar-dark bg-danger">
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
           <a class="navbar-brand mx-auto" href="#">Canteen Management System</a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -56,7 +56,7 @@
         <option value="Smoking">Smoking</option>
         <option value="Non Smoking">Non Smoking</option>
       </select>
-      <button class="btn btn-danger" style="width:100%" onclick="bookSlot()">Submit</button>
+      <button class="btn btn-primary" style="width:100%" onclick="bookSlot()">Submit</button>
     </div>
   </div>
   <div class="card mt-3 hidden" style="width:50%;margin-left:25%" id="card2">
@@ -69,7 +69,7 @@
       <input type="text" name="" class="form-select" id="ip3">
       <label class="my-3 ">Type of Table</label>
       <input type="text" name="" class="form-select mb-4" id="ip4">
-      <button class="btn btn-danger" style="width:100%" onclick="print()">Print Slip</button>
+      <button class="btn btn-primary" style="width:100%" onclick="print()">Print Slip</button>
     </div>
   </div>
   <script>
