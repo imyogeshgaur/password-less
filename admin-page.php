@@ -76,6 +76,33 @@ include 'includes/connect.php';
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
+  .navbar-color{
+    background-color:rgb(90, 90, 253);
+  }
+  .user-details{
+    background: url("./images/user-profile-bg.jpg") no-repeat center center !important;
+  }
+  input[type="text"]:focus:not([readonly]),
+  input[type="password"]:focus:not([readonly])
+  {
+  border-bottom: 1px solid rgb(116, 116, 224);
+  box-shadow: 0 1px 0 0 rgb(116, 116, 224);
+  }
+  .prefix{
+    color:rgb(90, 90, 253) !important;
+  }
+  a{
+    color:rgb(90, 90, 253) !important;
+  }
+  a:hover{
+    color:green !important;
+  }
+  .btn{
+    background:rgb(90, 90, 253) !important;
+  }
+  .page-footer{
+    background:rgb(90, 90, 253) !important;
+  }
   </style> 
 </head>
 
@@ -96,9 +123,7 @@ include 'includes/connect.php';
         <div class="navbar-fixed">
             <nav class="navbar-color">
                 <div class="nav-wrapper">
-                    <ul class="left">                      
-                      <li><h1 class="logo-wrapper"><a href="index.php" class="brand-logo darken-1"><img src="images/materialize-logo.png" alt="logo"></a> <span class="logo-text">Logo</span></h1></li>
-                    </ul>
+                    <h1 style="text-align:center">Canteen Management System</h1>
                 </div>
             </nav>
         </div>
@@ -119,7 +144,7 @@ include 'includes/connect.php';
             <li class="user-details cyan darken-2">
             <div class="row">
                 <div class="col col s4 m4 l4">
-                    <img src="images/avatar.jpg" alt="" class="circle responsive-img valign profile-image">
+                    
                 </div>
 				 <div class="col col s8 m8 l8">
                     <ul id="profile-dropdown" class="dropdown-content">
@@ -133,11 +158,11 @@ include 'includes/connect.php';
                 </div>
             </div>
             </li>
-            <li class="bold active"><a href="index.php" class="waves-effect waves-cyan"><i class="mdi-editor-border-color"></i> Food Menu</a>
+            <li class="bold active"><a href="index.php" class="waves-effect waves-cyan"><i class="mdi-editor-border-color prefix"></i> Food Menu</a>
             </li>
                 <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-editor-insert-invitation"></i> Orders</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-editor-insert-invitation prefix"></i> Orders</a>
                             <div class="collapsible-body">
                                 <ul>
 								<li><a href="all-orders.php">All Orders</a>
@@ -156,7 +181,7 @@ include 'includes/connect.php';
                 </li>
                  <li class="no-padding">
                     <ul class="collapsible collapsible-accordion">
-                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-question-answer"></i> Tickets</a>
+                        <li class="bold"><a class="collapsible-header waves-effect waves-cyan"><i class="mdi-action-question-answer prefix"></i> Tickets</a>
                             <div class="collapsible-body">
                                 <ul>
 								<li><a href="all-tickets.php">All Tickets</a>
@@ -173,7 +198,7 @@ include 'includes/connect.php';
                         </li>
                     </ul>
                 </li>			
-            <li class="bold"><a href="users.php" class="waves-effect waves-cyan"><i class="mdi-social-person"></i> Users</a>
+            <li class="bold"><a href="users.php" class="waves-effect waves-cyan prefix"><i class="mdi-social-person"></i> Users</a>
             </li>	
            		
         </ul>
