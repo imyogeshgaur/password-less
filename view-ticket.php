@@ -89,6 +89,43 @@ if($continue){
   .right-alert textarea.materialize-textarea + label:after{
       right:70px;
   }
+  .navbar-color{
+    background-color:rgb(90, 90, 253);
+  }
+  .user-details{
+    background: url("./images/user-profile-bg.jpg") no-repeat center center !important;
+  }
+    input[type="text"]:focus:not([readonly]),
+  input[type="email"]:focus:not([readonly]),
+  input[type="tel"]:focus:not([readonly])
+  {
+  border-bottom: 1px solid rgb(116, 116, 224);
+  box-shadow: 0 1px 0 0 rgb(116, 116, 224);
+  }
+  .prefix{
+    color:rgb(90, 90, 253) !important;
+  }
+  .collection-item{
+    color:black !important;
+  }
+  .collection-item:hover{
+    color:red !important;
+  }
+  a{
+    color:rgb(90, 90, 253) !important;
+  }
+  a:hover{
+    color:green !important;
+  }
+  .btn{
+    background:rgb(90, 90, 253) !important;
+  }
+  .page-footer{
+    background:rgb(90, 90, 253) !important;
+  }
+  .collection-item{
+      background:rgb(183, 219, 213) !important;
+  }
   </style> 
 </head>
 
