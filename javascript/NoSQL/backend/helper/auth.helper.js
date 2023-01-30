@@ -6,8 +6,8 @@ config({ path: resolve("../backend/.env") })
 const sendMail = async (token, email) => {
     try {
         const myTransPort = new createTransport({
-            host: "smtp.gmail.com",
-            port: 465,
+            host: "smtp.office365.com",
+            port: 587,
             auth: {
                 user: process.env.SENDER_MAIL,
                 pass: process.env.SENDER_PASSWORD
