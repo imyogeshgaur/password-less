@@ -23,10 +23,11 @@ const sendMail = async (token, email) => {
             <head>
             </head>
             <body>
-                Dear user, thank you for Registeration.<br>
-                This is Your Login URL: <br>
-                http://${process.env.BASE_URL}/auth/verify?token=${token}
+                <p> Dear user, </p>   
+                <p>Thank You for Registeration 
                 <br>
+                <a href="http://${process.env.BASE_URL}/auth/verify?token=${token}">
+                Click Here</a> to Login !!!</p>
                 Thanks and Regards
                 <br>
                 Team Yogesh Gaur

@@ -44,6 +44,15 @@ class AuthService {
             console.log("Auth's Service Error : ", error)
         }
     }
+    async updateUser(data){
+       try {
+            const email = data.email;
+            const update = await this.auth.updateOne({email},{$set:data})
+            return update
+       } catch (error) {
+            console.log("Auth's Service Error : ", error)
+       }
+    }
 }
 
 export default AuthService

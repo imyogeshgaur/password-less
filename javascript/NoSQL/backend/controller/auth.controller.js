@@ -37,6 +37,20 @@ class AuthController {
             console.log("Auth's Controller : Internal Server Error !!!")
         }
     }
+
+    async updateUser() {
+        try {
+            const data = this.req.body;
+            const update = await this.service.updateUser(data);
+            if (update.acknowledged) {
+                return this.res.status(200).send("Details Updated !!!")
+            } else {
+                return this.res.status(200).send("Details Not Updated !!!")
+            }
+        } catch (error) {
+            console.log("Auth's Controller : Internal Server Error !!!")
+        }
+    }
 }
 
 export default AuthController
