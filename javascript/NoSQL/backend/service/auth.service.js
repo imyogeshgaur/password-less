@@ -26,7 +26,7 @@ class AuthService {
         try {
             const isExist = await this.auth.findOne({ email });
             if (isExist) {
-                const token = jsonwebtoken.sign({ userId: isExist._id }, process.env.JWT_SECRET)
+                const token = jsonwebtoken.sign({ userId: isExist._id }, process.env.JWT_SECRET,{expiresIn:60000})
                 const message = await sendMail(token, email);
                 return { message };
             } else {
