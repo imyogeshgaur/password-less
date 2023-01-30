@@ -43,9 +43,9 @@ class AuthController {
             const data = this.req.body;
             const update = await this.service.updateUser(data);
             if (update.acknowledged) {
-                return this.res.status(200).send("Details Updated !!!")
+                return this.res.status(200).send({ message: "Details Updated !!!" })
             } else {
-                return this.res.status(200).send("Details Not Updated !!!")
+                return this.res.status(200).send({ message: "Details Not Updated !!!" })
             }
         } catch (error) {
             console.log("Auth's Controller : Internal Server Error !!!")
